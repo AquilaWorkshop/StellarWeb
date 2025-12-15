@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saturn Particles</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="canvas-host"></div>
+      <div class="hud">
+        <div class="hud__group">
+          <div class="hud__title">Saturn Pulse</div>
+          <div class="hud__subtitle">张开掌心放大群星，握拳收束光环</div>
+        </div>
+        <div class="hud__group hud__status">
+          <span class="status-chip" id="gesture-indicator">正在主动申请摄像头权限…如未看到弹窗，轻触页面</span>
+          <button id="start-btn" class="pill" aria-label="重新尝试授权">重新尝试</button>
+          <button id="fullscreen-btn" aria-label="全屏">⤢ 全屏</button>
+        </div>
+      </div>
+      <video id="input-video" autoplay playsinline muted></video>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js" crossorigin></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
